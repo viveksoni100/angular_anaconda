@@ -4,11 +4,13 @@ import {AppComponent} from "./app.component";
 import {BrowserModule} from "@angular/platform-browser";
 import {HttpClientModule} from "@angular/common/http";
 import {NgModule} from "@angular/core";
+import {ServersComponent} from "./servers/servers.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
+    ServersComponent
   ],
   improts: [
     BrowserModule,
