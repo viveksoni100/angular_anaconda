@@ -1,2 +1,9 @@
 <p>servers works!</p>
-<button class="btn btn-primary" [disabled]="!allowedNewServer" >Add Server</button>
+
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
+<button class="btn btn-primary" [disabled]="!allowedNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<p>{{allowedNewServer}}</p>
+<p [innerText]="allowedNewServer"></p>
+<p>{{serverCreationStatus}}</p>
