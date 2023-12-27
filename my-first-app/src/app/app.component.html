@@ -3,7 +3,9 @@
     <div class="col-xs-12">
       <h3>This is my app.component.html file</h3>
       <hr>
-      <app-server></app-server>
+      <app-server *ngFor="let server of servers"></app-server>
+      <!--<app-server></app-server>
+      <app-server></app-server>-->
       <app-servers></app-servers>
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
