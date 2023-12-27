@@ -1,7 +1,15 @@
 <p>servers works!</p>
 
+<!--two way binding using event-->
 <input type="text" class="form-control" (input)="onUpdateServerName($event)">
 <p>{{serverName}}</p>
+
+
+<!--two way binding using databinding-->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+
+
 <button class="btn btn-primary" [disabled]="!allowedNewServer"
   (click)="onCreateServer()">Add Server</button>
 <p>{{allowedNewServer}}</p>
