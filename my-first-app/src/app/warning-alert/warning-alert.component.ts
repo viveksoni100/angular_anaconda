@@ -1,9 +1,10 @@
 import {Component, HostBinding} from '@angular/core';
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-warning-alert',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './warning-alert.component.html',
   styleUrl: './warning-alert.component.css'
 })
