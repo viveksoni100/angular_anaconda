@@ -4,14 +4,27 @@
 <input type="text" class="form-control" (input)="onUpdateServerName($event)">
 <p>{{serverName}}</p>
 
-
+<hr>
 <!--two way binding using databinding-->
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <p>{{serverName}}</p>
-
-
 <button class="btn btn-primary" [disabled]="!allowedNewServer"
-  (click)="onCreateServer()">Add Server</button>
+        (click)="onCreateServer()">Add Server</button>
+
+<input type="text" class="form-control" [(ngModel)]="username" (input)="onUsernameEdit($event)">
+<p>{{username}}</p>
+<button class="btn btn-primary" [disabled]="!isUsernameEmpty"
+        (click)="resetUsername()">click me!</button>
+
 <p>{{allowedNewServer}}</p>
 <p [innerText]="allowedNewServer"></p>
-<p>{{serverCreationStatus}}</p>
+
+
+<hr>
+<!--directives-->
+<p *ngIf="serverCreated">{{serverCreationStatus}}</p>
+
+
+
+
+
