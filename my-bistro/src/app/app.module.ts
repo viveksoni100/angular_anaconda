@@ -12,7 +12,7 @@ import {DropdownDirective} from "./shared/dropdown.directive";
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, RecipesComponent, RecipesListComponent, RecipesItemComponent,
-    RecipesDetailComponent, ShoppingListComponent, ShoppingEditComponent, DropdownDirective
+    RecipesDetailComponent, ShoppingListComponent, ShoppingEditComponent, DropdownDirective,     RecipesDetailComponent, ShoppingListComponent, ShoppingEditComponent, DropdownDirective
   ]
 })
 export class AppModule {
