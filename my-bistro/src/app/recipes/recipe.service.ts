@@ -1,10 +1,12 @@
 import {Recipe} from "./recipe.model";
-import {Injectable} from "@angular/core";
+import {EventEmitter, Injectable} from "@angular/core";
 
 @Injectable({
   providedIn: 'root',
 })
 export class RecipeService {
+
+  recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe('Samosa','Paneer Samosa', 'https://media.istockphoto.com/id/502663991/photo/punjabi-samosa-23.jpg?s=612x612&w=0&k=20&c=Ne0ArOpa-4L2N-INtPnq371fFZoM6qWW6R4ryN9TWW0='),
