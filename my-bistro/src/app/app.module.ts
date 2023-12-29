@@ -7,11 +7,12 @@ import {RecipesItemComponent} from "./recipes/recipes-list/recipes-item/recipes-
 import {RecipesDetailComponent} from "./recipes/recipes-detail/recipes-detail.component";
 import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
 import {ShoppingEditComponent} from "./shopping-list/shopping-edit/shopping-edit.component";
+import {DropdownDirective} from "./shared/dropdown.directive";
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, RecipesComponent, RecipesListComponent, RecipesItemComponent,
-    RecipesDetailComponent, ShoppingListComponent, ShoppingEditComponent
+    RecipesDetailComponent, ShoppingListComponent, ShoppingEditComponent, DropdownDirective
   ]
 })
 export class AppModule {
