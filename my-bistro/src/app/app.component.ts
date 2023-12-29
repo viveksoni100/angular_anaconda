@@ -17,7 +17,6 @@ import {LoggingService} from "./service/logging.service";
     RecipesItemComponent, RecipesDetailComponent, ShoppingListComponent, ShoppingEditComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
-  // providers: [LoggingService]
 })
 export class AppComponent {
   title = 'my-bistro';
@@ -27,8 +26,10 @@ export class AppComponent {
   }
 
   onNavigate(feature: string) {
-    // console.log('loaded feature ::: ', feature);
     this.loggingService.log('loaded feature ::: ' + feature);
     this.loadedFeature = feature;
+    this.loggingService.logTableUpdated.subscribe(
+      (ingName: string) => this.loggingService.log('event emitted from an adding ingredient feature')
+    );
   }
 }
