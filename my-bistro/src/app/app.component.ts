@@ -19,7 +19,7 @@ import {ShoppingEditComponent} from "./shopping-list/shopping-edit/shopping-edit
 })
 export class AppComponent {
   title = 'my-bistro';
-  loadedFeature = 'recipe';
+  loadedFeature = 'shopping-list';
 
   onNavigate(feature: string) {
     console.log('loaded feature ::: ', feature);
