@@ -8,6 +8,7 @@ import {RecipesItemComponent} from "./recipes/recipes-list/recipes-item/recipes-
 import {RecipesDetailComponent} from "./recipes/recipes-detail/recipes-detail.component";
 import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
 import {ShoppingEditComponent} from "./shopping-list/shopping-edit/shopping-edit.component";
+import {LoggingService} from "./service/logging.service";
 
 @Component({
   selector: 'app-root',
@@ -16,13 +17,18 @@ import {ShoppingEditComponent} from "./shopping-list/shopping-edit/shopping-edit
     RecipesItemComponent, RecipesDetailComponent, ShoppingListComponent, ShoppingEditComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
+  // providers: [LoggingService]
 })
 export class AppComponent {
   title = 'my-bistro';
   loadedFeature = 'shopping-list';
 
+  constructor(private loggingService: LoggingService) {
+  }
+
   onNavigate(feature: string) {
-    console.log('loaded feature ::: ', feature);
+    // console.log('loaded feature ::: ', feature);
+    this.loggingService.log('loaded feature ::: ' + feature);
     this.loadedFeature = feature;
   }
 }
