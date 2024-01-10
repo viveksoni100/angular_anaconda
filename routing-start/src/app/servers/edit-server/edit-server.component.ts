@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { ServersService } from '../servers.service';
+import {ServersService} from '../servers.service';
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {CanComponentGuard} from "./can-deactivate-guard.service";
-import {askConfirmation} from "@angular/cli/src/utilities/prompt";
 
 @Component({
   selector: 'app-edit-server',
