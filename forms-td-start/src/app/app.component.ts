@@ -17,6 +17,7 @@ export class AppComponent {
   formModel!: FormModel;
   defaultQuestion!: 'pet';
   answer!: '';
+  genders = ['male', 'female'];
 
   suggestUserName() {
     const suggestedName = 'Superuser';
