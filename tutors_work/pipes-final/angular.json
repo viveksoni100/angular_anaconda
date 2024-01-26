@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "prj-forms-final": {
+    "pipes-final": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/prj-forms-final",
+            "outputPath": "dist/pipes-final",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "prj-forms-final:build:production"
+              "buildTarget": "pipes-final:build:production"
             },
             "development": {
-              "buildTarget": "prj-forms-final:build:development"
+              "buildTarget": "pipes-final:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "prj-forms-final:build"
+            "buildTarget": "pipes-final:build"
           }
         },
         "test": {
