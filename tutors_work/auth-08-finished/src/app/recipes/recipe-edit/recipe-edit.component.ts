@@ -13,6 +13,7 @@ export class RecipeEditComponent implements OnInit {
   id!: number;
   editMode = false;
   recipeForm!: FormGroup;
+  ingredientsArray!: FormArray;
 
   constructor(
     private route: ActivatedRoute,
@@ -83,11 +84,13 @@ export class RecipeEditComponent implements OnInit {
       }
     }
 
+    this.ingredientsArray = recipeIngredients as unknown as FormArray;
+
     this.recipeForm = new FormGroup({
       name: new FormControl(recipeName, Validators.required),
       imagePath: new FormControl(recipeImagePath, Validators.required),
       description: new FormControl(recipeDescription, Validators.required),
-      ingredients: recipeIngredients
+      ingredients: this.ingredientsArray
     });
   }
 }
