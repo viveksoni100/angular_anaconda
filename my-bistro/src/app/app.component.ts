@@ -9,6 +9,7 @@ import {RecipesDetailComponent} from "./recipes/recipes-detail/recipes-detail.co
 import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
 import {ShoppingEditComponent} from "./shopping-list/shopping-edit/shopping-edit.component";
 import {LoggingService} from "./service/logging.service";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ export class AppComponent {
   loadedFeature = 'shopping-list';
 
   constructor(private loggingService: LoggingService) {
+    console.log(environment.firebaseAPIKey);
   }
 
   onNavigate(feature: string) {
